@@ -1,0 +1,23 @@
+{
+  "name": "namaste_dsa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dheeraj0808/Namaste_Dsa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dheeraj0808/Namaste_Dsa/issues"
+  },
+  "homepage": "https://github.com/dheeraj0808/Namaste_Dsa#readme",
+  "description": "",
+  "dependencies": {
+    "chalk": "^5.5.0"
+  }
+}
