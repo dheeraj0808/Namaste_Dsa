@@ -26,3 +26,16 @@ function negativeIndexes(arr) {
 const nums = [4, -1, 7, -2, 0, -5];
 console.log(negativeIndexes(nums)); // [1, 3, 5]
 
+//3. Function to get the negative numbers from an array
+
+function negativePositionsWithValues(arr) {
+  const result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < 0) {
+      result.push({ index: i, value: arr[i] });
+    }
+  }
+  return result;
+}
+
+console.log(negativePositionsWithValues([4, -1, 7, -2, 0, -5]));
