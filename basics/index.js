@@ -1,3 +1,25 @@
+// lets understand the function in javascript
+// as the let a = 5 ; will not print anything but when we will use console.log(a) then it will print the value of a
+// because console.log is a function which will print the value of a in the console
+// function is a block of code which will perform a specific task
+function greet(name) {
+    console.log("Hello " + name);
+}
+// as in the above function we have passed a parameter name and when we will call the function then we have to pass the value of name
+greet("Dheeraj");
+greet("Rohit");
+greet("Rahul");
+greet("Ramesh");
+// function with multiple parameters and dynamic value
+function add(a, b) {
+    let sum = a + b;
+    console.log("sum is " + sum);
+}
+add(4, 5);
+add(10, 20);
+add(100, 200);
+add(1000, 2000);
+
 //function 1
 function calculator(a, b) {
     let add = a + b;
@@ -213,8 +235,8 @@ for (let i = 0; i < 5; i++) {
     }
 }
 //
-for (let i=5;i>0;i--){
-    for(let j=0;j<i;j++){
-        console.log(i,j);
+for (let i = 5; i > 0; i--) {
+    for (let j = 0; j < i; j++) {
+        console.log(i, j);
     }
 }
