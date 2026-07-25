@@ -1,11 +1,14 @@
 function countEven(n) {
-    let result = 0;
-    for (let i = 0; i <= n; i++) {
+    let count = 0;
+    //counting its some also 
+    let sum = 0;
+    for (let i = 1; i <= n; i++) {
         if (i % 2 === 0) {
-            result += 1;
+            count += 1;
+            sum += i;
         }
     }
-    return result;
+    return [count, sum];
 }
 
-console.log(countEven(6));
+console.log(countEven(16));
