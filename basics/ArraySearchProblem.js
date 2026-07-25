@@ -40,3 +40,53 @@ function searchElement3(arr, target) {
 
 }
 console.log(searchElement3([2, 3, 4, 5, 6, 5, 5], 5));
+
+// 4. finding total negative number count in the array
+
+function Fnnc(arr) {
+    let count = 0
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < 0) {
+            count++;
+
+        }
+    }
+
+    return count;
+}
+console.log(Fnnc([2, -3, 4, 5, 6, -5, 5]));
+//5 sum of negative number in the array
+function Fnnc2(arr) {
+    let sum = 0
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < 0) {
+            sum += arr[i];
+
+        }
+    }
+
+    return sum;
+}
+console.log(Fnnc2([2, -3, 4, 5, 6, -5, 5]));
+
+//finding first negative number position
+function ffnn(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < 0) {
+            return i;
+        }
+    }
+    return -1;
+}
+console.log(ffnn([2, -3, 4, 5, 6, -5, 5]));
+
+//finding first negative number 
+function ffnn2(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < 0) {
+            return arr[i];
+        }
+    }
+    return -1;
+}
+console.log(ffnn2([2, -3, 4, 5, 6, -6, 5]));
