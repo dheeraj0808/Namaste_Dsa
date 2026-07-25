@@ -22,4 +22,14 @@ function flnn2(arr) {
 console.log("last negative number index " + flnn2([-2, 3, 4, 5, 6, -15, 5]));
 
 ///<<---alternative aproach-->>
-//
+//find last negative number
+function LastNegativeNumber(arr) {
+    let lastNegative = null;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < 0) {
+            lastNegative = arr[i];
+        }
+    }
+    return lastNegative;
+}
+console.log("last negative number increment aproach " + LastNegativeNumber([-2, 3, 4, 5, 6, -15, 5]));
