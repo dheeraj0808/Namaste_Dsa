@@ -1,5 +1,5 @@
 // write a function that will count total digit in the number
-function CountSum(n) {
+function Count(n) {
     let total = 0;
     if (n === 0) {
         return 1;
@@ -14,5 +14,7 @@ function CountSum(n) {
 
 }
 
-console.log(CountSum(12091));
-console.log(CountSum(0));
+console.log(Count(12091));
+console.log(Count(0));
+console.log(Count(-123));//invalid inputs
+console.log(Count()); //invalid inputs
