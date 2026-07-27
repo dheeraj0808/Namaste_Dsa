@@ -23,3 +23,11 @@ console.log(reveseArr([10, 20, 30, 40, 50]));
 console.log(reveseArr([10]));
 console.log(reveseArr([10, 20]));
 console.log(reveseArr([10, -20, 30, 40, 150, 0, 0]));
+
+
+// if we have to attempt the same question in for loop then we will simple
+function reve(arr) {
+    for (let left = 0, right = arr.length - 1; left < right; left++, right--) {
+        //swap condition 
+    }
+}
