@@ -5,7 +5,9 @@ function Count(n) {
         return 1;
     }
 
-
+// handling negative number 
+// converting negative number to positive
+n= Math.abs(n);
     while (n > 0) {
         n = Math.floor(n / 10);
         total++;

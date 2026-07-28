@@ -2,7 +2,9 @@
 function palindromNum(n) {
     let reverse = 0;
     let orignal = n;
-
+if(n<0){
+    return false;
+}
     if (n === 0) {
         return true;
     }
@@ -25,3 +27,5 @@ function palindromNum(n) {
 console.log(palindromNum(124));
 console.log(palindromNum(121));
 console.log(palindromNum(122));
+console.log(palindromNum(-1221));
+console.log(palindromNum(-1));
