@@ -38,7 +38,20 @@ for(let i=0;i<3;i++){
 
 // loops 6 reverse order 
 for(let i=5;i>0;i--){
-    for(let j=0;j<i;j--){
+    for(let j=0;j<i;j++){
        console.log(`6. Outer loop: ${i}, Inner loop: ${j}`); 
     }
+}
+
+
+// square star pattern
+
+for(i=0;i<5;i++){
+    let row = ' ';
+    for(j=0;j<5;j++){
+        row +="*"
+        
+    }
+     console.log(row);
+   
 }
