@@ -3,15 +3,15 @@
 
 function missingNumber(arr) {
     let n = arr.length;
-    let expectedSum = (n * (n + 1)) / 2;
-    let actualSum = 0;
+    let TotalSum = (n * (n + 1)) / 2;
+    let PartialSum = 0;
     for (let i = 0; i < arr.length; i++) {
 
-        actualSum += arr[i];
+        PartialSum += arr[i];
 
     }
 
-    return expectedSum - actualSum;
+    return TotalSum - PartialSum;
 
 }
 console.log(missingNumber([3, 0, 1]));                 // 2
