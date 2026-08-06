@@ -22,3 +22,14 @@ ex:- function fun(){
     num=num-1;
     fun(num);
 }
+
+common Mistake while Recursion
+-> Missing base case
+->Not simplifying the input- the program never reaches at the base case
+->Too deep Recursion- Large input
+->Keep in the time complexity
+
+When we have to use Recursion 
+-> Problem can be broken into sub problem
+->Trees and Graph
+->Back Tracking Devide and conquer
