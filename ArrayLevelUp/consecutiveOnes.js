@@ -15,4 +15,4 @@
         }
         return Math.max(current_sum,maxCount);
     }
-    console.log(consecutiveOne([1,1,,3,3,4,5,2,1,1,1,1,5,0,0,7,5,2,1,1,1,1,1]))
+    console.log(consecutiveOne([1,1,3,3,4,5,2,1,1,1,1,5,0,0,7,5,2,1,1,1,1,1]));
