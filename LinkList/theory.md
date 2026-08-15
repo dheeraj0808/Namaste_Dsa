@@ -27,7 +27,9 @@ i.e.
 head is the starting node of the linked list and generally linked list is represented by its head
 
 ## Tail
-in linked list tail is basically representing or pointing to null
+in linked list tail is basically pointing to null
+
+tail.next === null
 
 ## Basic Operations
 - Traversal: visit every node
@@ -53,8 +55,9 @@ in linked list tail is basically representing or pointing to null
 
 ## Conclusion
 A linked list is a flexible data structure that is helpful for dynamic memory and frequent updates.
+When the location/reference is already known, Linked List can modify the structure without shifting other elements.
 
-Array vs linked list
+## Array vs linked list
 
 ### Array
 - Stores elements in continuous memory
