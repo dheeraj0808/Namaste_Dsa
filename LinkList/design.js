@@ -69,12 +69,26 @@ this.size++;
 }
 //6. add at index ie just before the index
 function addAtIndex(val , position){
-
+let newNode = new Node (val);
 
 if (position === 0) {
     this.addAtHead(val);
     return;
 }
+// above is edge case of if we have to add at the 1st position
+else if(position===this.size){
+    this.addAtTail(val);
+    return;
+}
+// this above case cover the tail case
+else{
+ //new move current to node before the position 
+let current = this.head;
+for (let i = 0; i < position - 1; i++) {
+        current = current.next;
+    }
+
+}
+this.size++;
 }
 
-//7. delete at index ie delete the ith index
