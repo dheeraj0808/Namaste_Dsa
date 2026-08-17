@@ -28,10 +28,53 @@ function myLinkedList(){
 
 // 3. getting node value of linked list 
 
+function getValueAt(position) {
+    let current = this.head;
+
+    for (let i = 0; i < position; i++) {
+        current = current.next;
+    }
+
+    return current.data;
+}
+
 //4. add at head
+//---> new node is create , and then new node point to the head and head points to new node
+
+function addAtHead(val){
+    let newNode = new Node (val);
+    newNode.next=this.head;
+    this.head=newNode;
+    this.size++;
+
+}
 
 //5. add at tail
+function addAtTail(val){
+let newNode = new Node (val);
+if(this.head==null){
+    this.head=newNode;
+}
+else{
 
+    let current = this.head;
+    while(current.next != null){
+        current = current.next;
+    }
+
+    current.next = newNode;
+
+}
+this.size++;
+}
 //6. add at index ie just before the index
+function addAtIndex(val , position){
+
+
+if (position === 0) {
+    this.addAtHead(val);
+    return;
+}
+}
 
 //7. delete at index ie delete the ith index
