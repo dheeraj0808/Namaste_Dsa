@@ -29,6 +29,10 @@ function myLinkedList(){
 // 3. getting node value of linked list 
 
 function getValueAt(position) {
+
+    if(position<0 || position >=size)return -1;
+    // this covers the edge case if not found 
+
     let current = this.head;
 
     for (let i = 0; i < position; i++) {
@@ -92,3 +96,45 @@ for (let i = 0; i < position - 1; i++) {
 this.size++;
 }
 
+//7. delete a value from linked list
+
+/*in the deletion we have to reach at the the index-1 
+and then then link this index to new node (2 step ahead)-> because that centre element have been deleted
+->then we have to handle the corner cases 
+-> then we have to reduce the size because we have deleted an element
+*/
+function deleteAtIndex(index){
+    // this is the case of if the linked list is of empty size
+    if (this.head === null){
+        return
+    }
+    //inavlid position 
+    if(index <0 || index>=this.size){
+        return -1;
+    }
+    // this is the case if have to delete at the head node element
+    if(index===0){
+        this.head=this.head.next;
+        this.size--;
+        return;
+    }
+
+    let curr = this.head;
+    for(let i =0;i<index-1;i++){
+curr=curr.next;
+    }
+    //skiping the current target element
+    curr.next=curr.next.next;
+
+    //reduce the index
+    this.size--;
+}
+
+/*Complexity
+
+For deletion at position:
+
+Traversal → O(n)
+Actual deletion → O(1)
+Overall → O(n)
+Extra space → O(1) */
