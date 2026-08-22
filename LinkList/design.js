@@ -12,7 +12,10 @@ function node (value){
 /* 
 when we have to create a new node 
 let newNode = new Node (5);
+--> ie creating a instance of node function 
 -> here we are just calling the above function and passing the value 
+--> that means here we are just calling the function and passing the function and function 
+use this.value =5 , and this.next= null 
  */
 
 // linked list is representation of its head
@@ -47,30 +50,44 @@ function getValueAt(position) {
 
 function addAtHead(val){
     let newNode = new Node (val);
+    // creating new node first 
     newNode.next=this.head;
+    // and my new node point to the head
     this.head=newNode;
+    //now head should point to newNode
+
     this.size++;
+    // and at the last we have to increase the length
 
 }
 
-//5. add at tail
+//5. Add to tail
 function addAtTail(val){
 let newNode = new Node (val);
+// calling or creating a instance of new node fuction that will create a new node
 if(this.head==null){
     this.head=newNode;
 }
+// the upper condition means if the heads point to the null that means no element in the linked list so 
+// we will just add the new node here
+
 else{
 
     let current = this.head;
+    // in this condtion we assume this to the head and below we iteration to the whole linked list 
+    // for the finding that at which node pointing to the null that means that's the current tail
     while(current.next != null){
         current = current.next;
+        // these condtion means untill our crr.next is not null we keep on mooving
     }
 
     current.next = newNode;
+    // as we have already reached to the tail so add the new node here ie pointing next to what we have creating
 
 }
 this.size++;
 }
+
 //6. add at index ie just before the index
 function addAtIndex(val , position){
 let newNode = new Node (val);
