@@ -7,8 +7,8 @@
     └───────┘
     this is a example of the containing loop
 
---> the main basic idea or solution of this problem is we will traverse to each node
-and if we find any nodes that are already apeared before then we will return true because this will happen
+--> the main basic idea or solution of this problem is we will traverse to each node 
+and if we find any nodes that are already apeared before then we will return true because this will happen 
 only when the loop is present , and if untill the node null found no node repeated then we return true
      */
 
@@ -16,19 +16,15 @@ only when the loop is present , and if untill the node null found no node repeat
 
 //While traversing, keep track of every node I've already visited. 
 // If I encounter the same node again, there must be a cycle.
+function findLoop(head){
+    let seenNode = new Set();
 
-function hasCycle(head) {
-    const visited = new Set();
-    let curr = head;
-
-    while (curr) {
-        if (visited.has(curr)) {
+    while(curr !=null){
+        if(seenNode.has(curr)){
             return true;
         }
-
-        visited.add(curr);
-        curr = curr.next;
+        seenNode.add(curr);
+        curr=curr.next;
     }
-
-    return false;
+    return false
 }
