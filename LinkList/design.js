@@ -31,18 +31,15 @@ function myLinkedList(){
 
 // 3. getting node value of linked list 
 
-function getValueAt(position) {
+// getting the node value we will have to reach at the node
+function findNodeValue(index){
+    if(index<0 || index>=size)return -1;
 
-    if(position<0 || position >=size)return -1;
-    // this covers the edge case if not found 
-
-    let current = this.head;
-
-    for (let i = 0; i < position; i++) {
-        current = current.next;
+        let current = this.head;
+    for(let i=0;i<index;i++){
+current = current.next;
     }
-
-    return current.data;
+    return current.value;
 }
 
 //4. add at head
@@ -108,6 +105,7 @@ let current = this.head;
 for (let i = 0; i < position - 1; i++) {
         current = current.next;
     }
+    current.next=newNode;
 
 }
 this.size++;
