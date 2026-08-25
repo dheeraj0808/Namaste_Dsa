@@ -76,3 +76,19 @@ A string is basically an array of characters used to handle text. Since strings 
 - Usually mutable
 - Comes with general-purpose methods (`push`, `pop`, `map`, etc.)
 - Modifying changes the same array (no new copy needed)
+
+
+### String Length
+let str = "Hello";
+
+console.log(str.length);
+
+Notice:
+
+length = 5
+
+but the last index = 4.
+
+Therefore:
+str[str.length - 1]
+gives the last character.
