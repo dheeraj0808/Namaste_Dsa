@@ -69,3 +69,33 @@ Return dummy.next
 
 */
 
+function mergeSorted(list1, list2) {
+    let dummy = new ListNode(0);
+    let tail = dummy
+    while (list1 && list2) {
+        if (list1.val >= list2.val) {
+            tail.next = list1;
+            list1 = list1.next;
+        }
+        else {
+            tail.next = list2;
+            list2 = list2.next;
+        }
+        tail = tail.next;
+    }
+    // Attach remaining nodes
+
+    if (list1 !== null) {
+
+        tail.next = list1;
+
+    } else {
+
+        tail.next = list2;
+
+    }
+
+    // Dummy itself is not part of the answer
+
+    return dummy.next;
+}
