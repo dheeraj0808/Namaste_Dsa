@@ -1,4 +1,4 @@
-# Anagram — LeetCode 242
+// Anagram — LeetCode 242
 
 // Anagram = same characters + same frequency, order can be different
 
@@ -15,50 +15,23 @@
 // 6. If everything matches → true
 
 function isAnagram(s, t) {
-
-```
-// If lengths are different, cannot be anagrams
-if (s.length !== t.length) {
-    return false;
-}
-
-let freq = {};
-
-// Count characters of s
-for (let i = 0; i < s.length; i++) {
-
-    let char = s[i];
-
-    if (freq[char] === undefined) {
-        freq[char] = 1;
-    } else {
-        freq[char]++;
-    }
-}
-
-// Decrease frequency using t
-for (let i = 0; i < t.length; i++) {
-
-    let char = t[i];
-
-    if (freq[char] === undefined || freq[char] === 0) {
+    if (s.length !== t.length) {
         return false;
     }
 
-    freq[char]--;
+    let count = {};
+
+    for (let char of s) {
+        count[char] = (count[char] || 0) + 1;
+    }
+
+    for (let char of t) {
+        if (!count[char]) {
+            return false;
+        }
+
+        count[char]--;
+    }
+
+    return true;
 }
-
-return true;
-```
-
-}
-
-/* Test Cases */
-
-console.log(isAnagram("anagram", "nagaram")); // true
-console.log(isAnagram("rat", "car"));         // false
-
-// Time Complexity: O(n)
-// Space Complexity: O(n)
-
-// Pattern: Frequency Counting
