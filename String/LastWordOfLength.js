@@ -29,3 +29,48 @@ function lastwordLength(str){
     str = str.split(" ");
     return str[str.length-1].length;
 }
+
+// 2nd methode 
+
+function lastWordlength2(str){
+    //first we have to trim 
+    let n = str.length-1; // to find the length of the string 
+    // without finding length we can't go to the last length 
+    while(n>=0){
+       /*
+        if(str[n]===" "){
+            --n;
+        }
+        else{
+            break;
+        }
+         */
+
+        if(str[n] != " "){
+            break;
+        }
+        --n;
+        // this is the alternative way of writing the same logic
+    }
+     // n is a point where my last word starts
+        let count =0;
+        while(n>=0){
+            /*
+            if(str[n] !==" "){
+                --n;
+                ++count;
+            }
+            else{
+                break;
+            }
+            */
+           if(str[n]===" "){
+            break;
+           }
+           --n;
+           ++count;
+           // another way of writing the same logic
+        }
+        return count;
+}
+
