@@ -33,3 +33,22 @@ s[i] is either 'L' or 'R'.
 s is a balanced string.
 */
 
+var balancedStringSplit = function (s) {
+    let balance = 0;
+    let count = 0;
+
+    for (let i = 0; i < s.length; i++) {
+
+        if (s[i] === 'R') {
+            balance++;
+        } else {
+            balance--;
+        }
+
+        if (balance === 0) {
+            count++;
+        }
+    }
+
+    return count;
+};
