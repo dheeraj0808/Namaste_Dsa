@@ -1,3 +1,9 @@
+// Why use a Stack?
+// - We need LIFO order (Last In, First Out) — the most recently added item must be handled first.
+// - Real uses: undo/redo, browser back button, function call stack (recursion), bracket/parentheses matching,
+//   expression evaluation, backtracking (DFS, maze solving).
+// - Basically, anytime you need to "reverse" the order of processing or track "what came last", use a stack.
+
 let stack = [];
 
 stack.push(10);
