@@ -13,8 +13,11 @@ stack.push();
 
 stack.pop();
 
-//stack.pop(10); // ❌ this is does not work because we can not pass any value inside the pop fuction 
+//stack.pop(10); // ❌ this is does not work because we can not pass any value inside the pop fuction
 // when we call the pop function then it will remove the top most element
+
+//stack[0] = 999; // ❌ this is invalid usage because directly changing by index breaks the stack rule (LIFO)
+// always use push() and pop() to change a stack, never touch elements by index
 
 console.log(stack);
 

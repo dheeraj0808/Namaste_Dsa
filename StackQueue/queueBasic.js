@@ -15,6 +15,9 @@ queue.shift(); // dequeue → remove from the front
 //queue.shift(10); // ❌ this does not work because we can not pass any value inside the shift function
 // when we call the shift function then it will remove the front most element
 
+//queue[0] = 999; // ❌ this is invalid usage because directly changing by index breaks the queue rule (FIFO)
+// always use push() and shift() to change a queue, never touch elements by index
+
 console.log(queue);
 
 
